@@ -1,7 +1,7 @@
 #language:pt
     @login
     Funcionalidade: Login
-        
+        @login
         Esquema do Cenário: Possibilidades de login
         
             Dado que o usuario acesse a pagina de login
