@@ -30,7 +30,7 @@ module Actions
   end
 
   def inform_fixed_data
-    table_usr = Roo::Spreadsheet.open("../Actions/table_usr.xlsx")
+    table_usr = Roo::Spreadsheet.open("test_mass/table_usr.xlsx")
 
     @user = table_usr.sheet("massa_teste").cell("A", 3).to_s
     @passwd = table_usr.sheet("massa_teste").cell("B", 3).to_s
