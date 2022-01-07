@@ -23,7 +23,7 @@ end
 Capybara.configure do
   include RSpec::Matchers
   Capybara.run_server = false
-  Capybara.default_driver = :selenium_chrome_headless
+  Capybara.default_driver = :selenium_chrome
   Capybara.page.driver.browser.manage.window.maximize
   Capybara.default_max_wait_time = 10
   Capybara.app_host = "https://parodify.herokuapp.com"

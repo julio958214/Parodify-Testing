@@ -11,5 +11,5 @@ Quando("ele informar dados fixos") do
 end
 
 Então("ele é cadastrado no site com sucesso") do
-  expect(page).to have_xpath("//div[2]/h2", text: "Recomendadas")
+  expect(page).to have_xpath("//body/section/div[2]/h2", text: "Recomendadas")
 end
