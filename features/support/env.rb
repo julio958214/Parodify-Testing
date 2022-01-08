@@ -10,8 +10,8 @@ require "rspec"
 require "roo"
 require "allure-cucumber"
 require_relative "helpers"
-require_relative "../pages/cadastro_page.rb"
-require_relative "../pages/login_page.rb"
+require_relative "../actions/cadastro_actions.rb"
+require_relative "../actions/login_actions.rb"
 
 World(Actions)
 World(Helpers)

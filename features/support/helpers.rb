@@ -1,7 +1,7 @@
 require "httparty"
 
 module Helpers
-  def delorean(email)
+  def delorean
     HTTParty.get("https://parodify.herokuapp.com/helpers?email=testerqaparodify@gmail.com")
   end
 end

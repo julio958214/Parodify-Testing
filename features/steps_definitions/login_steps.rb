@@ -5,7 +5,7 @@ end
 Quando("ele submeter seu login com:") do |table|
   info = table.rows_hash
   fill_email_passwd(info[:email], info[:passwd])
-  delorean info[:email]
+  delorean
 end
 
 Então("ele visualzia a mensagem: {string}") do |string|
