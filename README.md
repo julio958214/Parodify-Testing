@@ -3,11 +3,11 @@
 
 
 ### Instalação
-Ruby 2.5
+Ruby 3.0
 
-Install Chrome 59
-chromedriver
+Instalar chromedriver
 
+https://chromedriver.chromium.org/downloads
 
 **Instalar o Bundle**
 ```
