@@ -26,6 +26,11 @@ git clone https://github.com/julio958214/Enjoeat.git
 bundle install
 ```
 
+**Para executar o projeto**
+
+```
+cucumber
+```
 
 
 [<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/julio-santos-43428019b)
