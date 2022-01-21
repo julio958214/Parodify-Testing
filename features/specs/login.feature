@@ -13,4 +13,4 @@
             Exemplos:
             | email                       |   passwd       |  msg_saida                         |
             | testerqaparodify@gmail.com  |   teste123     |  Recomendadas                      |
-            | testerqaparodify@gmail.3223 |   teste123w    |  Opps! Dados de acesso incorretos! |
+            | testerqaparodify@gmail.3223 |   teste123w    |  Oops! Email e/ou senha incorretos.|
