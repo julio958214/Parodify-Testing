@@ -11,7 +11,7 @@ chromedriver
 
 **Instalar o Bundle**
 ```
-gem install bundler
+gem install bundle
 ```
 
 
