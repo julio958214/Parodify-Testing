@@ -23,9 +23,9 @@ module Actions
     new_email = Faker::Internet.email(domain: "gmail")
     new_password = Faker::Internet.password(min_length: 8)
 
-    @regist.email.set "#{new_email}"
-    @regist.passwd.set "#{new_password}"
-    @regist.confirm_passwd.set "#{new_password}"
+    @regist.email.set new_email
+    @regist.passwd.set new_password
+    @regist.confirm_passwd.set new_password
     @regist.btn_register.click
   end
 
