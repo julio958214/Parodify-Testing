@@ -5,7 +5,7 @@
 ### Instalação
 Ruby 2.5
 
-Install Chrome 59
+Install Chrome
 chromedriver
 
 
