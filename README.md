@@ -1,5 +1,4 @@
-# Executando testes no projeto Enjoeat
-
+# Executando testes no projeto Parodify-user-faker
 
 
 ### Instalação
@@ -31,8 +30,6 @@ bundle install
 ```
 cucumber
 ```
-
-
 
 **Redes**
 
