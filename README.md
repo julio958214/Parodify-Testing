@@ -2,7 +2,7 @@
 
 
 ### Instalação
-Ruby 2.5
+Download Ruby https://rubyinstaller.org/downloads/
 
 Install Chrome
 chromedriver
