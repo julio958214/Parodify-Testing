@@ -8,7 +8,7 @@
             Quando ele submeter seu login com:
             | email  | <email>  |
             | passwd | <passwd> |
-            Então ele visualzia a mensagem: "<msg_saida>"
+            Então ele visualiza a mensagem: "<msg_saida>"
 
             Exemplos:
             | email                       |   passwd       |  msg_saida                         |
