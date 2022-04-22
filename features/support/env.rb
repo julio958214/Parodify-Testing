@@ -31,7 +31,7 @@ Capybara.configure do |config|
   include RSpec::Matchers
   config.run_server = false
   config.default_driver = :chrome_custom
-  config.default_max_wait_time = 10
+  config.default_max_wait_time = 20
   config.app_host = "https://parodify.herokuapp.com"
 end
 
