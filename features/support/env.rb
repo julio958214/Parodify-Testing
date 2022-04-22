@@ -16,7 +16,7 @@ require_relative "../pages/login_page.rb"
 World(Actions)
 World(Helpers)
 
-Capybara.register_driver :chorme do |app|
+Capybara.register_driver :chrome do |app|
   caps = Selenium::WebDriver::Remote::Capabilities.chrome(
     "goog:chromeOptions" => {
       "args" => ["--headless", "--disable-site-isolation-trials", "--disable-gpu"],
@@ -29,7 +29,7 @@ end
 Capybara.configure do |config|
   include RSpec::Matchers
   config.run_server = false
-  config.default_driver = :chorme
+  config.default_driver = :chrome
   config.default_max_wait_time = 20
   config.app_host = "https://parodify.herokuapp.com"
 end
