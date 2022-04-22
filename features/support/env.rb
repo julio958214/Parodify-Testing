@@ -16,14 +16,14 @@ require_relative "../pages/login_page.rb"
 World(Actions)
 World(Helpers)
 
-Capybara.register_driver :chrome_custom do |app|
+Capybara.register_driver :chorme do |app|
   caps = Selenium::WebDriver::Remote::Capabilities.chrome(
     "goog:chromeOptions" => {
       "args" => ["--headless", "--disable-site-isolation-trials", "--disable-gpu"],
       "excludeSwitches" => ["enable-logging"],
     },
   )
-  Capybara::Selenium::Driver.new(app, :browser => :chrome, :desired_capabilities => caps)
+  Capybara::Selenium::Driver.new(app, :browser => :chrome, :capabilities => caps)
 end
 
 Capybara.configure do |config|
