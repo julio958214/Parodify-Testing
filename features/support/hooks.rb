@@ -1,7 +1,7 @@
 Before do
   @regist = Register_page.new
   @login = Login_page.new
-  page.driver.browser.manage.window.maximize
+  # page.driver.browser.manage.window.maximize
 end
 
 After do
