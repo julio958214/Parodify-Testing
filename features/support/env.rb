@@ -27,9 +27,9 @@ Capybara.register_driver :chorme do |app|
 end
 
 Capybara.configure do |config|
-  # include RSpec::Matchers
-  # config.run_server = false
-  config.default_driver = :chrome_custom
+  include RSpec::Matchers
+  config.run_server = false
+  config.default_driver = :chorme
   config.default_max_wait_time = 20
   config.app_host = "https://parodify.herokuapp.com"
 end
