@@ -1,5 +1,5 @@
 #language:pt
-    @cadastro_geral
+    @cadastro_geral      @all_feature
     Funcionalidade: Cadastro de usuário
 
         @user_dinamico

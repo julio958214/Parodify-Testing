@@ -1,5 +1,5 @@
 #language:pt
-    @login
+    @login      @all_feature
     Funcionalidade: Login
         @login
         Esquema do Cenário: Possibilidades de login
