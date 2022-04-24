@@ -1,14 +1,15 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "selenium-webdriver"
-gem "capybara"
-gem "cucumber"
-gem "rspec", "~> 3.9.0"
-gem "rufo"
-gem "webdrivers", "~> 4.0"
-gem "site_prism"
-gem "faker"
-gem "cpf_faker"
-gem "allure-cucumber"
-gem "httparty", "~> 0.20.0"
-gem "roo"
+gem 'allure-cucumber'
+gem 'capybara'
+gem 'cpf_faker'
+gem 'cucumber'
+gem 'faker'
+gem 'rspec'
+gem 'rufo'
+gem 'selenium-webdriver'
+gem 'httparty'
+gem 'site_prism'
+gem 'webdrivers'
+gem 'roo'
+gem 'rubocop'

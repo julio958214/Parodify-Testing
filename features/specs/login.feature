@@ -1,9 +1,9 @@
 #language:pt
     @login      @all_feature
     Funcionalidade: Login
+        
         @login
         Esquema do Cenário: Possibilidades de login
-        
             Dado que o usuario acesse a pagina de login
             Quando ele submeter seu login com:
             | email  | <email>  |

@@ -1,9 +1,10 @@
+#---> Methods to instantiate classes
 module Pages
   def login
-    @login_page ||= Login_page.new
+    @login ||= LoginPage.new
   end
 
   def regist
-    @register_page ||= Register_page.new
+    @regist ||= RegisterPage.new
   end
 end
