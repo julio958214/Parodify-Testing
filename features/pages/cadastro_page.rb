@@ -12,7 +12,6 @@ end
 module Actions
   def access_site
     regist.load
-    expect(page).to have_current_path("https://parodify.herokuapp.com", url: true)
     page.has_title? "Parodify | By Papito"
     regist.btn_login.click
     regist.btn_singin_register.click
