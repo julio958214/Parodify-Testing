@@ -1,10 +1,5 @@
-Before do
-  @regist = Register_page.new
-  @login = Login_page.new
-  page.driver.browser.manage.window.maximize
-end
 
-After do
+AfterStep do
   shot = page.save_screenshot("logs/temp_evidence.png")
 
   Allure.add_attachment(

@@ -11,22 +11,21 @@ end
 
 module Actions
   def access_site
-    @regist.load
+    regist.load
     expect(page).to have_current_path("https://parodify.herokuapp.com", url: true)
     page.has_title? "Parodify | By Papito"
-    @regist.btn_login.click
-    @regist.btn_singin_register.click
+    regist.btn_login.click
+    regist.btn_singin_register.click
   end
 
   def inform_dynamic_data
-    @regist.title_page_register
+    regist.title_page_register
     new_email = Faker::Internet.email(domain: "gmail")
     new_password = Faker::Internet.password(min_length: 8)
 
-    @regist.email.set new_email
-    @regist.passwd.set new_password
-    @regist.confirm_passwd.set new_password
-    @regist.btn_register.click
+    regist.email.set new_email
+    regist.passwd.set new_password
+    regist.confirm_passwd.set new_password
   end
 
   def inform_fixed_data
@@ -36,9 +35,8 @@ module Actions
     @passwd = table_usr.sheet("massa_teste").cell("B", 3).to_s
     @pss_confirm = table_usr.sheet("massa_teste").cell("C", 3).to_s
 
-    @regist.email.set @user
-    @regist.passwd.set @passwd
-    @regist.confirm_passwd.set @pss_confirm
-    @regist.btn_register.click
+    regist.email.set @user
+    regist.passwd.set @passwd
+    regist.confirm_passwd.set @pss_confirm
   end
 end

@@ -11,5 +11,6 @@ Quando("ele informar dados fixos") do
 end
 
 Então("ele é cadastrado no site com sucesso") do
+  regist.btn_register.click
   expect(page).to have_xpath("//div[2]/h2[@class='is-size-5']", :text => "Recomendadas")
 end
