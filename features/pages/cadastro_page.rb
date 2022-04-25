@@ -1,4 +1,3 @@
-#---> elements mapped to registration
 class RegisterPage < SitePrism::Page
   set_url '/'
   element :btn_login, 'a[href="/users/sign_in"]'

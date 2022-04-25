@@ -8,6 +8,6 @@ Quando('ele submeter seu login com:') do |table|
   delorean
 end
 
-Então('ele visualiza a mensagem: {string}') do |string|
+Entao('ele visualiza a mensagem: {string}') do |string|
   expect(msg_return.text).to eq string
 end

@@ -25,7 +25,7 @@ module Actions
     @result = false
     begin
       @result = login.credential_error.visible?
-    rescue => exception
+    rescue StandardError => e
       puts 'element not found'
     end
   end
