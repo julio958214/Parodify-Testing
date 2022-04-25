@@ -18,7 +18,7 @@ World(Pages)
 World(Actions)
 World(Helpers)
 
-CONFIG = YAML.load_file(File .dirname(__FILE__) + '/data/hom.yml')
+CONFIG = YAML.load_file("#{File.dirname(__FILE__)}/data/hom.yml")
 
 Capybara.register_driver :selenium do |app|
   @caps = Selenium::WebDriver::Remote::Capabilities.chrome(
