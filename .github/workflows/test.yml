@@ -20,8 +20,8 @@ jobs:
       - name: Install dependencies
         run: bundle install
 
-      - name: Run tests chrome_h
+      - name: Run tests chrome_headless
         run: bundle exec cucumber BROWSER=chrome_headless
       
-      - name: Run tests firefox_h
+      - name: Run tests firefox_headless
         run: bundle exec cucumber BROWSER=firefox_headless
