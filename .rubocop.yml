@@ -3,3 +3,6 @@ AllCops:
   
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
+
+Style/CaseLikeIf:
+  Enabled: false
