@@ -49,7 +49,7 @@ Capybara.register_driver :selenium do |app|
   end
 end
 
-Capybara.configure do |config|  
+Capybara.configure do |config|
   include RSpec::Matchers
   config.default_driver = :selenium
   config.default_max_wait_time = 20
