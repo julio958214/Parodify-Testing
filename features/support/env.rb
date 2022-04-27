@@ -25,8 +25,7 @@ Capybara.register_driver :selenium do |app|
   if BROWSER.eql?('chrome')
     @caps_chrome = Selenium::WebDriver::Remote::Capabilities.chrome(
       'goog:chromeOptions' => {
-        'args' => ['--chrome', '--disable-site-isolation-trials',
-                   '--disable-gpu', '--start-maximized'],
+        'args' => ['--chrome', '--disable-site-isolation-trials', '--disable-gpu'],
         'excludeSwitches' => ['enable-logging']
       }
     )
@@ -47,11 +46,10 @@ Capybara.register_driver :selenium do |app|
   elsif BROWSER.eql?('firefox_headless')
     @caps_firefox = Selenium::WebDriver::Firefox::Options.new(args: ['--headless'])
     Capybara::Selenium::Driver.new(app, browser: :firefox, capabilities: @caps_firefox)
-
   end
 end
 
-Capybara.configure do |config|
+Capybara.configure do |config|  
   include RSpec::Matchers
   config.default_driver = :selenium
   config.default_max_wait_time = 20
