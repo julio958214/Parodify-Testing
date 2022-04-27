@@ -21,4 +21,4 @@ jobs:
         run: bundle install
 
       - name: Run tests
-        run: bundle exec cucumber BROWSER=chrome_headless
+        run: bundle exec cucumber BROWSER=firefox_headless
