@@ -18,17 +18,37 @@ World(Pages)
 World(Actions)
 World(Helpers)
 
+BROWSER = ENV.fetch('BROWSER')
 CONFIG = YAML.load_file("#{File.dirname(__FILE__)}/data/hom.yml")
 
 Capybara.register_driver :selenium do |app|
-  @caps = Selenium::WebDriver::Remote::Capabilities.chrome(
-    'goog:chromeOptions' => {
-      'args' => ['--headless', '--disable-site-isolation-trials',
-                 '--disable-gpu', '--start-maximized'],
-      'excludeSwitches' => ['enable-logging']
-    }
-  )
-  Capybara::Selenium::Driver.new(app, browser: :chrome, capabilities: @caps)
+  if BROWSER.eql?('chrome')
+    @caps_chrome = Selenium::WebDriver::Remote::Capabilities.chrome(
+      'goog:chromeOptions' => {
+        'args' => ['--chrome', '--disable-site-isolation-trials',
+                   '--disable-gpu', '--start-maximized'],
+        'excludeSwitches' => ['enable-logging']
+      }
+    )
+    Capybara::Selenium::Driver.new(app, browser: :chrome, capabilities: @caps_chrome)
+
+  elsif BROWSER.eql?('chrome_headless')
+    @caps_chrome = Selenium::WebDriver::Remote::Capabilities.chrome(
+      'goog:chromeOptions' => {
+        'args' => ['--headless', '--disable-site-isolation-trials']
+      }
+    )
+    Capybara::Selenium::Driver.new(app, browser: :chrome, capabilities: @caps_chrome)
+
+  elsif BROWSER.eql?('firefox')
+    @caps_firefox = Selenium::WebDriver::Firefox::Options.new(args: ['--firefox'])
+    Capybara::Selenium::Driver.new(app, browser: :firefox, capabilities: @caps_firefox)
+
+  elsif BROWSER.eql?('firefox_headless')
+    @caps_firefox = Selenium::WebDriver::Firefox::Options.new(args: ['--headless'])
+    Capybara::Selenium::Driver.new(app, browser: :firefox, capabilities: @caps_firefox)
+
+  end
 end
 
 Capybara.configure do |config|
