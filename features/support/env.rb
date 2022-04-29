@@ -15,7 +15,6 @@ require_relative '../pages/login_page'
 require_relative '../support/helpers_page'
 
 World(Pages)
-World(Actions)
 World(Helpers)
 
 BROWSER = ENV.fetch('BROWSER')
@@ -51,6 +50,7 @@ end
 
 Capybara.configure do |config|
   include RSpec::Matchers
+  config.run_server = false
   config.default_driver = :selenium
   config.default_max_wait_time = 20
   config.app_host = CONFIG['url_home']
