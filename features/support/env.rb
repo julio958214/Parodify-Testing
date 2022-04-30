@@ -23,7 +23,7 @@ CONFIG = YAML.load_file("#{File.dirname(__FILE__)}/data/hom.yml")
 Capybara.register_driver :selenium do |app|
   if BROWSER.eql?('chrome')
     caps_chrome = Selenium::WebDriver::Remote::Capabilities.chrome(
-      'goog:chromeOptions' => {'excludeSwitches' => ['enable-logging']}
+      'goog:chromeOptions' => { 'excludeSwitches' => ['enable-logging'] }
     )
     Capybara::Selenium::Driver.new(app, browser: :chrome, capabilities: caps_chrome)
 
@@ -41,15 +41,11 @@ Capybara.register_driver :selenium do |app|
     Capybara::Selenium::Driver.new(app, browser: :firefox, capabilities: headless)
 
   elsif BROWSER.eql?('edge')
-    edge = Selenium::WebDriver::Edge::Options.new(
-      args: ['--edge'], excludeSwitches: ['enable-logging']
-    )
+    edge = Selenium::WebDriver::Edge::Options.new(args: ['--edge'], excludeSwitches: ['enable-logging'])
     Capybara::Selenium::Driver.new(app, browser: :edge, capabilities: edge)
 
   elsif BROWSER.eql?('edge_headless')
-    edge = Selenium::WebDriver::Edge::Options.new(
-      args: ['--headless'], excludeSwitches: ['enable-logging']
-    )
+    edge = Selenium::WebDriver::Edge::Options.new(args: ['--headless'], excludeSwitches: ['enable-logging'])
     Capybara::Selenium::Driver.new(app, browser: :edge, capabilities: edge)
   end
 end

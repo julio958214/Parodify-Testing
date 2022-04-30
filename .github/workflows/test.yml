@@ -25,6 +25,3 @@ jobs:
       
       - name: Run tests Firefox
         run: bundle exec cucumber BROWSER=firefox_headless
-
-      - name: Run tests Edge
-        run: bundle exec cucumber BROWSER=edge_headless
