@@ -1,3 +1,7 @@
+Before do
+  page.driver.browser.manage.window.maximize
+end
+
 AfterStep do
   shot = page.save_screenshot('logs/temp_evidence.png')
 
