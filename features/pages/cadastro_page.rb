@@ -1,3 +1,4 @@
+#---> registration actions
 class RegisterPage < SitePrism::Page
   set_url '/'
   element :btn_login, 'a[href="/users/sign_in"]'
@@ -7,25 +8,22 @@ class RegisterPage < SitePrism::Page
   element :passwd, '#user_password'
   element :confirm_passwd, '#user_password_confirmation'
   element :btn_register, 'input[type="submit"]'
-end
 
-#---> registration actions
-module Actions
   def access_site
-    regist.load
+    load
     page.has_title? 'Parodify | By Papito'
-    regist.btn_login.click
-    regist.btn_singin_register.click
+    btn_login.click
+    btn_singin_register.click
   end
 
   def inform_dynamic_data
-    regist.title_page_register
+    title_page_register
     new_email = Faker::Internet.email(domain: 'gmail')
     new_password = Faker::Internet.password(min_length: 8)
 
-    regist.email.set new_email
-    regist.passwd.set new_password
-    regist.confirm_passwd.set new_password
+    email.set new_email
+    passwd.set new_password
+    confirm_passwd.set new_password
   end
 
   def look_for_data
@@ -38,8 +36,12 @@ module Actions
   end
 
   def insert_data
-    regist.email.set @user
-    regist.passwd.set @passwd
-    regist.confirm_passwd.set @pss_confirm
+    email.set @user
+    passwd.set @passwd
+    confirm_passwd.set @pss_confirm
+  end
+
+  def msg_recommended
+    find(:xpath, '//div[2]/h2[@class="is-size-5"]')
   end
 end
