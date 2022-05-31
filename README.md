@@ -1,4 +1,4 @@
-# Executando testes no projeto Parodify-user-faker
+# Executando testes no projeto Parodify-Testing
 
 
 ### Instalação
