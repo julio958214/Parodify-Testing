@@ -1,37 +1,33 @@
-# Executando testes no projeto Parodify-Testing
+# Execução do Projeto
 
+### Projeto Parodify-Testing
+
+Criei este projeto para apresentar um exemplo de automação Web utilizando Ruby Capybara e Cucumber, o projeto foi estruturado utilizando o padrão page object e um plugin para report de execução chamado Allure. o projeto contém características como interação com planilhas de execel, especificações de cenário em Gherkin execuções em diferentes navegadores.
 
 ### Instalação
-Download Ruby https://rubyinstaller.org/downloads/
+Instale o ruby pelo link: https://rubyinstaller.org/downloads/
 
-Install Chrome
-chromedriver
+Instale ChromeDriver com a mesma versão do seu navegador chrome pelo link: https://chromedriver.chromium.org/downloads
 
+para instalar as dependências
 
-**Instalar o Bundle**
+**Instale o Bundle**
 ```
 gem install bundle
 ```
-
-
-**Clonar o projeto**
+**Clone o projeto**
 ``` 
 git clone https://github.com/julio958214/Parodify-user-faker.git
 ```
-
-**Instalar dependências**
-
+**Instale as dependências**
 ```
 bundle install
 ```
-
-**Para executar o projeto**
-
+**Execute o projeto com o camando**
 ```
 cucumber
 ```
-
-**Redes**
+**Minhas Redes**
 
 [<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/julio-santos-43428019b)
 [<img src = "https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white">](https://www.instagram.com/juli0sts/)
