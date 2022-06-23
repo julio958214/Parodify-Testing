@@ -2,7 +2,7 @@
 
 ### Projeto Parodify-Testing
 
-Criei este projeto para apresentar um exemplo de automação Web utilizando Ruby Capybara e Cucumber, o projeto foi estruturado utilizando o padrão page object e um plugin para report de execução chamado Allure. o projeto contém características como interação com planilhas de execel, especificações de cenário em Gherkin execuções em diferentes navegadores.
+Criei este projeto para apresentar um exemplo de automação Web utilizando Ruby Capybara e Cucumber, o projeto foi estruturado utilizando o padrão page object e um plugin para report de execução chamado Allure. O projeto contém características como interação com planilhas de excel, especificações de cenário em Gherkin e execuções em diferentes navegadores.
 
 ### Instalação
 Instale o ruby pelo link: https://rubyinstaller.org/downloads/
